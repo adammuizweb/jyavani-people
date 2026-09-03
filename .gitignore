@@ -1,0 +1,9 @@
+# Confidential downstream case study. Never commit this file.
+/guide.md
+
+# Local runtime and build artifacts.
+/.builds/
+/dist/
+/*.zip
+/.phpunit.cache/
+/.DS_Store
