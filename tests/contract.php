@@ -11,6 +11,7 @@ $check = static function (bool $condition, string $message) use (&$failures): vo
 
 $check(($manifest['name'] ?? '') === 'jyavani-people' && ($manifest['version'] ?? '') === '0.1.0', 'manifest has stable plugin identity and version');
 $check(($manifest['requires']['jyavani'] ?? '') === '>=2.3.102', 'manifest requires the migration-capable Core baseline');
+$check(($manifest['icon'] ?? '') === 'icon.png' && ($manifest['store']['slug'] ?? '') === 'jyavani-people', 'manifest declares its neutral icon and Store identity');
 $permissionKeys = array_column($manifest['permissions'] ?? [], 'key');
 $check($permissionKeys === ['plugin.jyavani-people.profiles.edit', 'plugin.jyavani-people.profiles.publish', 'plugin.jyavani-people.profiles.delete'], 'manifest separates edit, publish, and delete permissions');
 $routes = array_column($manifest['admin']['pages'] ?? [], 'route');

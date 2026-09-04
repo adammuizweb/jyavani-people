@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Jyavani People">
+  <rect width="512" height="512" rx="112" fill="#10263d"/>
+  <path d="M104 390c0-65 42-108 105-108h94c63 0 105 43 105 108" fill="none" stroke="#f7f4ea" stroke-width="34" stroke-linecap="round"/>
+  <circle cx="256" cy="186" r="76" fill="#f2b84b"/>
+  <path d="M78 306c7-48 40-79 86-83M434 306c-7-48-40-79-86-83" fill="none" stroke="#79b9c6" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="145" cy="174" r="43" fill="#79b9c6"/>
+  <circle cx="367" cy="174" r="43" fill="#79b9c6"/>
+  <path d="M256 303v90M211 348h90" stroke="#10263d" stroke-width="22" stroke-linecap="round"/>
+</svg>
