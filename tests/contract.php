@@ -9,7 +9,7 @@ $check = static function (bool $condition, string $message) use (&$failures): vo
     if (!$condition) $failures[] = $message;
 };
 
-$check(($manifest['name'] ?? '') === 'jyavani-people' && ($manifest['version'] ?? '') === '0.1.0', 'manifest has stable plugin identity and version');
+$check(($manifest['name'] ?? '') === 'jyavani-people' && ($manifest['version'] ?? '') === '0.1.1', 'manifest has stable plugin identity and version');
 $check(($manifest['requires']['jyavani'] ?? '') === '>=2.3.102', 'manifest requires the migration-capable Core baseline');
 $check(($manifest['icon'] ?? '') === 'icon.png' && ($manifest['store']['slug'] ?? '') === 'jyavani-people', 'manifest declares its neutral icon and Store identity');
 $permissionKeys = array_column($manifest['permissions'] ?? [], 'key');
@@ -34,7 +34,7 @@ require_once $root . '/includes/validation.php';
 $check(jyp_normalize_slug('Example Person') === 'example-person' && jyp_normalize_slug('../') === null, 'profile slugs normalize safely');
 $check(jyp_normalize_locale('en_US') === 'en-us' && jyp_normalize_locale('bad/value') === null, 'source locales use bounded normalized identifiers');
 $check(jyp_normalize_url('https://example.test/profile') !== null && jyp_normalize_url('javascript:alert(1)') === null, 'public links reject executable URL schemes');
-$check(count(jyp_entry_types()) === 8 && count(jyp_link_types()) === 8, 'default tabs and quick links are general and bounded');
+$check(count(jyp_entry_types()) === 8 && count(jyp_link_types()) === 9 && isset(jyp_link_types()['linkedin'], jyp_link_types()['instagram']), 'default tabs and quick links are general and bounded');
 
 if ($failures !== []) {
     fwrite(STDERR, count($failures) . " contract check(s) failed.\n");

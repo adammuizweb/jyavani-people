@@ -3,10 +3,10 @@
 Jyavani People is a general-purpose directory and professional profile plugin
 for Jyavani CMS.
 
-Version `0.1.0` provides a translation-ready schema, profile administration,
+Version `0.1.1` provides a translation-ready schema, profile administration,
 structured links and taxonomies, public list and single routes, responsive
 neutral templates, year-aware typed-entry rendering, metadata, Schema.org
-`Person`, and a people sitemap.
+`Person`, a people sitemap, and explicit LinkedIn and Instagram link types.
 
 The plugin requires Jyavani `2.3.102` or newer. Install it through Jyavani's
 Plugin Manager so migrations and static asset publication use Core lifecycle

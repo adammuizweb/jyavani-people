@@ -35,6 +35,7 @@ function jyp_link_types(): array
         'website' => 'Website',
         'email' => 'Email',
         'linkedin' => 'LinkedIn',
+        'instagram' => 'Instagram',
         'scholar' => 'Google Scholar',
         'scopus' => 'Scopus',
         'orcid' => 'ORCID',
