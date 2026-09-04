@@ -1,0 +1,93 @@
+{
+  "name": "jyavani-people",
+  "version": "0.1.0",
+  "title": "Jyavani People",
+  "description": "Publish searchable people directories and structured professional profiles.",
+  "author": "Adam Muiz",
+  "author_uri": "https://adammuiz.com",
+  "plugin_uri": "https://github.com/adammuizweb/jyavani-people",
+  "homepage": "https://github.com/adammuizweb/jyavani-people",
+  "github_url": "https://github.com/adammuizweb/jyavani-people",
+  "license": "MIT",
+  "requires": {
+    "jyavani": ">=2.3.102",
+    "php": ">=8.1",
+    "extensions": ["pdo", "pdo_mysql", "json", "mbstring"],
+    "plugins": {}
+  },
+  "permissions": [
+    {
+      "key": "plugin.jyavani-people.profiles.edit",
+      "label": "Edit People Profiles",
+      "supports_scope": false,
+      "default_roles": ["admin"],
+      "delegable": true
+    },
+    {
+      "key": "plugin.jyavani-people.profiles.publish",
+      "label": "Publish People Profiles",
+      "supports_scope": false,
+      "default_roles": ["admin"],
+      "delegable": false
+    },
+    {
+      "key": "plugin.jyavani-people.profiles.delete",
+      "label": "Delete People Profiles",
+      "supports_scope": false,
+      "default_roles": ["admin"],
+      "delegable": false
+    }
+  ],
+  "admin": {
+    "pages": [
+      {
+        "route": "admin/tools/jyavani-people",
+        "file": "admin/index.php",
+        "title": "People",
+        "roles": ["admin"],
+        "permission": "plugin.jyavani-people.profiles.edit"
+      },
+      {
+        "route": "admin/tools/jyavani-people/edit",
+        "file": "admin/edit.php",
+        "title": "Edit Person",
+        "roles": ["admin"],
+        "permission": "plugin.jyavani-people.profiles.edit",
+        "hidden": true
+      },
+      {
+        "route": "admin/tools/jyavani-people/save",
+        "file": "admin/save.php",
+        "title": "Save Person",
+        "roles": ["admin"],
+        "permission": "plugin.jyavani-people.profiles.edit",
+        "hidden": true
+      },
+      {
+        "route": "admin/tools/jyavani-people/delete",
+        "file": "admin/delete.php",
+        "title": "Delete Person",
+        "roles": ["admin"],
+        "permission": "plugin.jyavani-people.profiles.delete",
+        "hidden": true
+      }
+    ],
+    "nav": [
+      {
+        "label": "People",
+        "icon": "users",
+        "page": "admin/tools/jyavani-people",
+        "parent": "tools",
+        "roles": ["admin"]
+      }
+    ]
+  },
+  "static": {
+    "copy": [
+      {"from": "assets/css/admin.css", "to": "static/plugins/jyavani-people/admin.css"},
+      {"from": "assets/css/frontend.css", "to": "static/plugins/jyavani-people/frontend.css"},
+      {"from": "assets/js/frontend.js", "to": "static/plugins/jyavani-people/frontend.js"}
+    ]
+  },
+  "assets": {"css": [], "js": []}
+}
