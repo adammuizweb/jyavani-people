@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 if (!defined('BACKEND_PATH')) return;
 
-const JYP_VERSION = '0.1.0';
+const JYP_VERSION = '0.1.2';
 const JYP_EDIT_PERMISSION = 'plugin.jyavani-people.profiles.edit';
 const JYP_PUBLISH_PERMISSION = 'plugin.jyavani-people.profiles.publish';
 const JYP_DELETE_PERMISSION = 'plugin.jyavani-people.profiles.delete';
